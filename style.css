@@ -105,6 +105,7 @@ body {
 
 .card__content .card__des {
     color: var(--Grey);
+    line-height: 1.6;
 }
 
 .card__author {
