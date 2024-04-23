@@ -1,0 +1,151 @@
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+
+@font-face {
+    font-family: Figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--Yellow);
+    font-family: Figtree;
+    font-size: 16px;
+}
+
+.mt-12 {
+    margin-top: 0.75rem;
+}
+
+.mt-24 {
+    margin-top: 1.5rem;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 24rem;
+    border-radius: 1.25rem;
+    background-color: var(--White);
+    box-shadow: 8px 8px var(--Black);
+    border: 1px solid var(--Black);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    /* Cái này là để flex theo hướng dọc */
+    flex-direction: column;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 16px 16px var(--Black);
+}
+
+.card__content {
+    padding: 1.5rem;
+    flex: 1;
+    align-items: center;
+}
+
+
+.card__img img {
+    border-radius: 1.25rem;
+    max-width: 100%;
+}
+
+.card__tag {
+    background-color: var(--Yellow);
+    text-align: center;
+    font-weight: 900;
+    display: inline-block;
+    font-style: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.card__date {
+    color: var(--Black);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card__content h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.card__content h1:hover {
+    color: var(--Yellow);
+}
+
+.card__content .card__des {
+    color: var(--Grey);
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+}
+
+.card__content .card__author img {
+    max-height: 32px;
+    max-width: 32px;
+}
+
+.card__content .card__author p {
+    margin-left: 0.75rem;
+    color: var(--Black);
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        max-width: 20rem;
+    }
+
+    .card:hover {
+        cursor: pointer;
+        box-shadow: 8px 8px var(--Black);
+    }
+
+    .card__tag {
+        font-size: 0.8rem;
+    }
+
+    .card__date {
+        font-size: 0.75rem;
+    }
+
+    .card__content h1 {
+        font-size: 1.25rem;
+    }
+
+    .card__content .card__des {
+        font-size: 0.8rem;
+    }
+}
